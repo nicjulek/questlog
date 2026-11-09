@@ -1,0 +1,20 @@
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.form button[type='submit'] {
+  margin-top: 4px;
+}
+
+.demo {
+  padding: 12px 14px;
+  border-radius: var(--r-sm);
+  background: var(--night-2);
+  color: var(--mist);
+  font-size: 14px;
+}
+
+.demo b {
+  color: var(--moon);
+}

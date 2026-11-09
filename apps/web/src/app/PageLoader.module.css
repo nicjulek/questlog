@@ -1,0 +1,38 @@
+.wrap {
+  display: grid;
+  place-items: center;
+  min-height: 50vh;
+}
+
+.wrap svg {
+  width: 90px;
+}
+
+.wrap path {
+  fill: none;
+  stroke: var(--mist-2);
+  stroke-dasharray: 3 4;
+}
+
+.wrap circle {
+  fill: var(--star);
+  animation: twinkle 1.2s ease-in-out infinite;
+}
+
+.wrap circle:nth-of-type(2) {
+  animation-delay: 0.15s;
+}
+
+.wrap circle:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.wrap circle:nth-of-type(4) {
+  animation-delay: 0.45s;
+}
+
+@keyframes twinkle {
+  50% {
+    opacity: 0.2;
+  }
+}

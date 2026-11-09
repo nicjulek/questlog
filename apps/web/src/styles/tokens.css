@@ -1,0 +1,30 @@
+/* Questlog: cada jogo é uma constelação. Céu índigo, estrelas que acendem. */
+:root {
+  --night: #151230;
+  --night-2: #1c1840;
+  --dusk: #241f4f;
+  --haze: #332c66;
+  --moon: #ece9ff;
+  --mist: #a49fcf;
+  --mist-2: #7d77ab;
+  --star: #ffe7a8;
+  --star-deep: #f4c862;
+  --danger: #ff8b9a;
+
+  --st-playing: #7ee3c1;
+  --st-beaten: #8fb8ff;
+  --st-platinum: #e9e4ff;
+  --st-paused: #f5c46b;
+  --st-backlog: #a49fcf;
+  --st-dropped: #f08da0;
+
+  --display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --body: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, sans-serif;
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --sidebar: 248px;
+  --shadow-pop: 0 18px 40px -12px rgba(5, 3, 20, 0.7);
+  color-scheme: dark;
+}

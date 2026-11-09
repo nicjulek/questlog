@@ -1,0 +1,55 @@
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 56px 24px;
+  border: 1px dashed var(--haze);
+  border-radius: var(--r-lg);
+  text-align: center;
+}
+
+.empty h2 {
+  font-size: 20px;
+}
+
+.empty p {
+  max-width: 44ch;
+  color: var(--mist);
+}
+
+.art {
+  width: 120px;
+  margin-bottom: 4px;
+}
+
+.art path {
+  fill: none;
+  stroke: var(--mist-2);
+  stroke-dasharray: 3 5;
+}
+
+.art circle {
+  fill: var(--mist);
+}
+
+.retry {
+  margin-top: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--haze);
+  border-radius: 999px;
+  background: transparent;
+  font-weight: 700;
+}
+
+.skeleton {
+  border-radius: var(--r-md);
+  background: linear-gradient(90deg, var(--night-2), var(--dusk), var(--night-2));
+  background-size: 200% 100%;
+  animation: shimmer 1.3s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}

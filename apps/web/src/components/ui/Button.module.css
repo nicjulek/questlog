@@ -1,0 +1,86 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn[aria-busy='true'] {
+  cursor: progress;
+}
+
+.md {
+  height: 42px;
+  padding: 0 18px;
+  font-size: 15px;
+}
+
+.sm {
+  height: 34px;
+  padding: 0 13px;
+  font-size: 14px;
+}
+
+.iconOnly.md {
+  width: 42px;
+  padding: 0;
+}
+
+.iconOnly.sm {
+  width: 34px;
+  padding: 0;
+}
+
+.primary {
+  background: var(--star);
+  color: #241a05;
+}
+
+.primary:hover:not(:disabled) {
+  background: #fff0c8;
+}
+
+.ghost {
+  border-color: var(--haze);
+  background: transparent;
+  color: var(--moon);
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--dusk);
+}
+
+.quiet {
+  background: transparent;
+  color: var(--mist);
+}
+
+.quiet:hover:not(:disabled) {
+  color: var(--moon);
+  background: var(--night-2);
+}
+
+.danger {
+  background: transparent;
+  border-color: rgba(255, 139, 154, 0.4);
+  color: var(--danger);
+}
+
+.danger:hover:not(:disabled) {
+  background: rgba(255, 139, 154, 0.12);
+}

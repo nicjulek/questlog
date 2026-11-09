@@ -1,0 +1,85 @@
+.page {
+  display: grid;
+  grid-template-columns: 1.2fr minmax(380px, 1fr);
+  min-height: 100vh;
+}
+
+.art {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 48px;
+  background: radial-gradient(80% 70% at 30% 30%, #3a2f7a 0%, transparent 70%), linear-gradient(160deg, #221c52, #120f2a);
+  overflow: hidden;
+}
+
+.tag {
+  max-width: 18ch;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.15;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 36px max(28px, 5vw);
+}
+
+.body {
+  margin: auto 0;
+  max-width: 380px;
+  width: 100%;
+  display: grid;
+  gap: 22px;
+  padding: 40px 0;
+}
+
+.body h1 {
+  font-size: 30px;
+}
+
+.lead {
+  margin-top: -12px;
+  color: var(--mist);
+}
+
+.footer {
+  color: var(--mist);
+}
+
+.footer a {
+  color: var(--star);
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .art {
+    padding: 28px 20px 8px;
+    gap: 12px;
+  }
+
+  .tag {
+    font-size: 22px;
+    max-width: none;
+  }
+
+  .panel {
+    padding: 24px 20px 40px;
+  }
+
+  .panel > a {
+    display: none;
+  }
+
+  .body {
+    padding: 8px 0 28px;
+  }
+}

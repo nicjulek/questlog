@@ -1,0 +1,30 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 19px;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.brand svg {
+  width: 30px;
+  height: 30px;
+}
+
+.brand path {
+  fill: none;
+  stroke: var(--star);
+  stroke-opacity: 0.6;
+  stroke-width: 1.5;
+}
+
+.brand circle {
+  fill: var(--star);
+}
+
+.brand .off {
+  fill: var(--mist-2);
+}

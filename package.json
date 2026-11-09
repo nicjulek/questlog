@@ -1,0 +1,23 @@
+{
+  "name": "questlog",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c magenta,cyan \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm run dev -w @questlog/api",
+    "dev:web": "npm run dev -w @questlog/web",
+    "db:up": "docker compose up -d db",
+    "db:migrate": "npm run db:migrate -w @questlog/api",
+    "db:seed": "npm run db:seed -w @questlog/api",
+    "build": "npm run build -w @questlog/api && npm run build -w @questlog/web",
+    "test": "npm test -w @questlog/api",
+    "lint": "npm run lint -w @questlog/web",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  }
+}

@@ -1,0 +1,18 @@
+.bar {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--haze);
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--star);
+  transition: width 0.4s ease;
+}
+
+.bar .full {
+  background: linear-gradient(90deg, var(--star), var(--st-platinum));
+}

@@ -1,0 +1,66 @@
+.head {
+  margin-bottom: 28px;
+}
+
+.head h1 {
+  font-size: clamp(34px, 5vw, 52px);
+}
+
+.head p {
+  margin-top: 8px;
+  color: var(--mist);
+  font-size: 17px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  gap: 4px;
+  padding: 18px 20px;
+  border: 1px solid var(--dusk);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.item:hover {
+  border-color: var(--haze);
+  background: var(--night-2);
+}
+
+.game {
+  color: var(--mist);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+  color: var(--mist-2);
+  font-size: 13px;
+}
+
+.pub {
+  color: var(--st-playing);
+  font-weight: 700;
+}
+
+.draft {
+  color: var(--mist);
+  font-weight: 700;
+}

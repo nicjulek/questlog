@@ -1,0 +1,114 @@
+.editor {
+  border: 1px solid var(--haze);
+  border-radius: var(--r-md);
+  background: var(--night);
+}
+
+.editor:focus-within {
+  border-color: #554c99;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 6px;
+  border-bottom: 1px solid var(--dusk);
+  border-radius: var(--r-md) var(--r-md) 0 0;
+  background: var(--night-2);
+}
+
+.tool {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--mist);
+}
+
+.tool:hover {
+  background: var(--dusk);
+  color: var(--moon);
+}
+
+.toolOn {
+  background: var(--dusk);
+  color: var(--star);
+}
+
+.prose {
+  min-height: 360px;
+  padding: 22px 24px 32px;
+  outline: none;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 72ch;
+}
+
+.prose > * + * {
+  margin-top: 0.9em;
+}
+
+.prose h2 {
+  margin-top: 1.6em;
+  font-size: 22px;
+}
+
+.prose h3 {
+  margin-top: 1.3em;
+  font-size: 18px;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.4em;
+}
+
+.prose li + li {
+  margin-top: 0.35em;
+}
+
+.prose li::marker {
+  color: var(--star);
+}
+
+.prose blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 12px 18px;
+  border-left: 3px solid var(--star);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  background: rgba(255, 231, 168, 0.07);
+  color: #e5e0ff;
+}
+
+.prose a {
+  color: var(--star);
+  text-underline-offset: 3px;
+}
+
+.prose code {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--dusk);
+  font-size: 0.92em;
+}
+
+.prose :global(p.is-editor-empty:first-child::before) {
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  color: var(--mist-2);
+  pointer-events: none;
+}
+
+:global(.ProseMirror[contenteditable='false']) {
+  min-height: 0;
+  padding: 0;
+}

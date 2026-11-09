@@ -1,0 +1,52 @@
+.page {
+  display: grid;
+  gap: 22px;
+  max-width: 680px;
+}
+
+.page h1 {
+  font-size: clamp(34px, 5vw, 52px);
+}
+
+.block {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border-radius: var(--r-lg);
+  background: var(--night-2);
+}
+
+.block h2 {
+  font-size: 18px;
+}
+
+.muted {
+  margin-top: -8px;
+  color: var(--mist);
+}
+
+.url {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.url code {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border-radius: var(--r-sm);
+  background: var(--night);
+  color: var(--star);
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.open {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--mist);
+  font-weight: 700;
+}

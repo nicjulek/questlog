@@ -1,0 +1,291 @@
+.page {
+  display: grid;
+  gap: 24px;
+}
+
+.loading {
+  display: grid;
+  gap: 12px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  color: var(--mist);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--moon);
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  padding: 28px 30px 24px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(236, 233, 255, 0.06);
+}
+
+.heroTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.titles h1 {
+  font-size: clamp(30px, 4.6vw, 52px);
+  line-height: 1.05;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 12px;
+  color: #cfcaf0;
+  font-size: 15px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 8px;
+}
+
+.heroActions button {
+  background: rgba(21, 18, 48, 0.4);
+  border-color: rgba(236, 233, 255, 0.18);
+}
+
+.sky {
+  margin: -6px -10px 0;
+  width: calc(100% + 20px);
+}
+
+.heroFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+.count {
+  font-size: 18px;
+  color: #cfcaf0;
+}
+
+.count strong {
+  font-family: var(--display);
+  font-size: 28px;
+  color: var(--star);
+  margin-right: 4px;
+}
+
+.count span {
+  margin-left: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--mist);
+}
+
+.perfect strong {
+  background: linear-gradient(90deg, var(--star), var(--st-platinum));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.caption {
+  min-height: 1.5em;
+  color: var(--mist);
+  font-size: 14px;
+  text-align: right;
+}
+
+.noStars {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+  padding: 60px 0 28px;
+  max-width: 48ch;
+  color: #cfcaf0;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--dusk);
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 12px 16px;
+  border: 0;
+  background: none;
+  color: var(--mist);
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--moon);
+}
+
+.tabOn {
+  color: var(--moon);
+  border-bottom-color: var(--star);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.seg {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--night-2);
+}
+
+.seg button {
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--mist);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.seg button[aria-checked='true'] {
+  background: var(--dusk);
+  color: var(--moon);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mist);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle:has(input:checked) {
+  color: var(--moon);
+}
+
+.toggle:has(input:focus-visible) {
+  outline: 2px solid var(--star);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.addRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 6px 6px 6px 16px;
+  border: 1px dashed var(--haze);
+  border-radius: var(--r-md);
+}
+
+.addRow:focus-within {
+  border-style: solid;
+  border-color: var(--star);
+}
+
+.addRow input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: none;
+  outline: none;
+}
+
+.addRow input::placeholder {
+  color: var(--mist-2);
+}
+
+.list {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filtered {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--mist);
+}
+
+.notes {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.noteText {
+  max-width: 64ch;
+  font-size: 17px;
+  white-space: pre-wrap;
+}
+
+.dates {
+  color: var(--mist);
+  font-size: 14px;
+}
+
+.confirmActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 20px 18px 18px;
+  }
+
+  .heroTop {
+    flex-direction: column;
+  }
+
+  .caption {
+    text-align: left;
+  }
+
+  .addRow {
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+
+  .addRow input {
+    flex-basis: 100%;
+    padding: 6px 8px;
+  }
+}

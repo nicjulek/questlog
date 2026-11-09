@@ -1,0 +1,29 @@
+.scroll {
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--haze) transparent;
+}
+
+.svg {
+  display: block;
+}
+
+.month {
+  fill: var(--mist);
+  font-size: 12px;
+  font-family: var(--body);
+}
+
+.empty {
+  fill: var(--haze);
+}
+
+.lit {
+  fill: var(--star);
+}
+
+.halo {
+  fill: var(--star);
+  filter: blur(3px);
+}

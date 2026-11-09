@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: questlog
+      POSTGRES_PASSWORD: questlog
+      POSTGRES_DB: questlog
+    ports:
+      - '5432:5432'
+    volumes:
+      - questlog-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U questlog']
+      interval: 5s
+      retries: 10
+
+  app:
+    build: .
+    profiles: ['app']
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://questlog:questlog@db:5432/questlog
+      JWT_SECRET: troque-este-segredo-em-producao
+      WEB_ORIGIN: http://localhost:3333
+    ports:
+      - '3333:3333'
+
+volumes:
+  questlog-data:

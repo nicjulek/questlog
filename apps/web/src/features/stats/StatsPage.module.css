@@ -1,0 +1,172 @@
+.page {
+  display: grid;
+  gap: 22px;
+}
+
+.head h1 {
+  font-size: clamp(34px, 5vw, 52px);
+}
+
+.story {
+  max-width: 54ch;
+  margin-top: 14px;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.5;
+  color: #d6d1f5;
+}
+
+.story strong {
+  font-family: var(--display);
+  color: var(--star);
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.block {
+  min-width: 0;
+  padding: 24px;
+  border-radius: var(--r-lg);
+  background: var(--night-2);
+}
+
+.block h2 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.blockHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 20px;
+}
+
+.blockHead p,
+.muted {
+  color: var(--mist);
+}
+
+.closest {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.closest a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 10px 12px;
+  margin: 0 -12px;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+}
+
+.closest a:hover {
+  background: var(--dusk);
+}
+
+.closest a > div {
+  grid-column: 1 / -1;
+}
+
+.gName {
+  font-weight: 700;
+}
+
+.left {
+  color: var(--star);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.recent {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recent li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+}
+
+.recent svg {
+  width: 18px;
+  margin-top: 3px;
+}
+
+.recent path {
+  fill: var(--star);
+}
+
+.rTitle {
+  font-weight: 700;
+}
+
+.rGame {
+  color: var(--mist);
+  font-size: 14px;
+}
+
+.rGame a {
+  color: var(--moon);
+  text-decoration-color: var(--haze);
+  text-underline-offset: 3px;
+}
+
+.stack {
+  display: flex;
+  height: 14px;
+  gap: 3px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--mist);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend b {
+  color: var(--moon);
+}
+
+@media (max-width: 900px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .block {
+    padding: 18px;
+  }
+}

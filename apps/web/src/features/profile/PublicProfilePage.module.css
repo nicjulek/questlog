@@ -1,0 +1,146 @@
+.page {
+  display: grid;
+  gap: 44px;
+}
+
+.head {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding-top: 24px;
+}
+
+.avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #4a3f96, var(--dusk));
+  font-family: var(--display);
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--star);
+}
+
+.head h1 {
+  font-size: clamp(30px, 5vw, 46px);
+}
+
+.handle {
+  color: var(--mist);
+}
+
+.bio {
+  max-width: 56ch;
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+.totals {
+  margin-top: 12px;
+  color: var(--mist);
+}
+
+.totals b {
+  font-family: var(--display);
+  color: var(--star);
+}
+
+.h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: grid;
+  gap: 10px;
+}
+
+.cardBody {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cardBody h3 {
+  font-size: 16px;
+}
+
+.count {
+  color: var(--mist);
+  font-size: 14px;
+}
+
+.guides {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guides a {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  gap: 16px;
+  align-items: baseline;
+  padding: 14px 16px;
+  margin: 0 -16px;
+  border-radius: var(--r-md);
+  text-decoration: none;
+}
+
+.guides a:hover {
+  background: var(--night-2);
+}
+
+.gGame {
+  color: var(--mist);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.gTitle {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.gDate {
+  color: var(--mist-2);
+  font-size: 13px;
+}
+
+.muted,
+.since {
+  color: var(--mist);
+}
+
+@media (max-width: 640px) {
+  .head {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
+  }
+
+  .guides a {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

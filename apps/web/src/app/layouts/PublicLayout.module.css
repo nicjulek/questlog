@@ -1,0 +1,29 @@
+.page {
+  min-height: 100vh;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 22px max(20px, env(safe-area-inset-right));
+}
+
+.link {
+  color: var(--mist);
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.link:hover {
+  color: var(--moon);
+}
+
+.main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 12px max(20px, env(safe-area-inset-right)) 80px;
+}
